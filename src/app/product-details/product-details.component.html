@@ -1,0 +1,13 @@
+<h2>Product Details</h2>
+
+<div *ngIf="product; else notAvailableProduct">
+    <h3>{{ product.name }}</h3>
+    <h3>{{ product.price }}</h3>
+    <p>{{ product.des }}</p>
+
+    <button (click)="addToCart(product)">Buy</button>
+</div>
+
+<ng-template #notAvailableProduct>
+    This product is not available!
+  </ng-template>
